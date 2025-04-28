@@ -1,0 +1,37 @@
+/* Roboto Variable Fonts */
+@font-face {
+	font-family: 'Roboto Variable';
+	src: url('woff2/Roboto-VariableFont_wdth,wght.woff2') format('woff2'),
+	url('woff/Roboto-VariableFont_wdth,wght.woff') format('woff'),
+	url('ttf/Roboto-VariableFont_wdth,wght.ttf') format('truetype'),
+	url('otf/Roboto-VariableFont_wdth,wght.otf') format('opentype');
+	font-weight: 100 900;
+	font-stretch: 75% 100%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Variable';
+	src: url('woff2/Roboto-Italic-VariableFont_wdth,wght.woff2') format('woff2'),
+	url('woff/Roboto-Italic-VariableFont_wdth,wght.woff') format('woff'),
+	url('ttf/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype'),
+	url('otf/Roboto-Italic-VariableFont_wdth,wght.otf') format('opentype');
+	font-weight: 100 900;
+	font-stretch: 75% 100%;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Roboto Flex Variable Font */
+@font-face {
+	font-family: 'Roboto Flex';
+	src: url('woff2/RobotoFlex-VariableFont_wght,wdth,GRAD.woff2') format('woff2'),
+	url('woff/RobotoFlex-VariableFont_wght,wdth,GRAD.woff') format('woff'),
+	url('ttf/RobotoFlex-VariableFont_wght,wdth,GRAD.ttf') format('truetype'),
+	url('otf/RobotoFlex-VariableFont_wght,wdth,GRAD.otf') format('opentype');
+	font-weight: 100 1000;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+}

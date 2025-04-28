@@ -1,0 +1,46 @@
+.hidden {
+display: none !important;
+}
+
+.visible {
+display: block !important;
+}
+
+.flex-center {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.grid-auto {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+gap: 10px;
+}
+
+.fade-in {
+animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.scale-in {
+animation: scaleIn 0.4s ease-in-out forwards;
+}
+
+.slide-down {
+animation: slideDown 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@keyframes scaleIn {
+0% {transform: scale(0.8); opacity: 0;}
+100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes slideDown {
+0% {transform: translateY(-20px); opacity: 0;}
+100% {transform: translateY(0); opacity: 1;}
+}

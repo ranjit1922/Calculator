@@ -1,0 +1,232 @@
+:root {
+--background-color: #000;
+--panel-color: #222;
+--display-color: #444;
+--number-color: #505050;
+--operator-color: #ff9500;
+--control-color: #a5a5a5;
+--layout-button-color: #a5a5a5;
+--text-color: white;
+--highlight-color: #1e90ff;
+--primary-color: #ff5252;
+--hover-link-color: #ffaaaa;
+}
+
+@keyframes fadeInIframe {
+0% {opacity: 0; transform: translateY(20px);}
+100% {opacity: 1; transform: translateY(0);}
+}
+
+html.noscript body>*:not(noscript) {
+display: none !important;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--background-color);
+color: var(--text-color);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
+transition: background-color 0.5s;
+}
+
+main {
+flex-grow: 1;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+padding: 1rem;
+box-sizing: border-box;
+}
+
+header {
+width: 100%;
+margin-bottom: 1rem;
+overflow: hidden;
+background-color: var(--panel-color);
+max-height: 0;
+transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+header.open {
+max-height: 300px;
+padding: 1rem;
+}
+
+section#calculator {
+background-color: var(--panel-color);
+width: 100%;
+max-width: 400px;
+min-width: 280px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 0 20px rgba(0,0,0,0.3);
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: all 0.4s ease;
+}
+
+div#display {
+width: 100%;
+background-color: var(--display-color);
+color: var(--text-color);
+font-size: 2.5rem;
+text-align: right;
+padding: 15px;
+border-radius: 10px;
+margin-bottom: 20px;
+overflow-x: auto;
+box-sizing: border-box;
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+
+#buttons {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(5, 1fr);
+gap: 12px;
+width: 100%;
+}
+
+section.layout {
+width: 100%;
+margin-top: 15px;
+}
+
+div.button-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+width: 100%;
+}
+
+button {
+font-size: 1.5rem;
+padding: 0;
+border: none;
+border-radius: 50%;
+background-color: var(--number-color);
+color: var(--text-color);
+cursor: pointer;
+transition: transform 0.2s, background-color 0.3s;
+display: flex;
+align-items: center;
+justify-content: center;
+user-select: none;
+height: 65px;
+width: 65px;
+box-sizing: border-box;
+}
+
+button:focus-visible {
+outline: 2px solid var(--highlight-color);
+}
+
+button:active {
+transform: scale(0.95);
+}
+
+button.control {
+background-color: var(--control-color);
+color: #000;
+font-weight: 500;
+}
+
+button.operator {
+background-color: var(--operator-color);
+}
+
+button.layout-toggle {
+background-color: var(--layout-button-color);
+color: #000;
+}
+
+button.func {
+background-color: var(--number-color);
+font-size: 1.2rem;
+}
+
+button#menu-toggle {
+position: fixed;
+right: 20px;
+top: 20px;
+width: 60px;
+height: 60px;
+font-size: 1.8rem;
+background-color: rgba(85, 85, 85, 0.7);
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+div.header-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+h1#title {
+margin: 0;
+font-size: 1.5rem;
+color: var(--text-color);
+}
+
+div.header-buttons {
+display: flex;
+gap: 10px;
+}
+
+div#noscript-frame-wrapper {
+position: fixed;
+inset: 0;
+background-color: var(--background-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding-top: 1rem;
+z-index: 9999;
+animation: fadeInIframe 0.8s ease-in-out forwards;
+}
+
+a#noscript-link {
+background-color: var(--primary-color);
+color: white;
+text-decoration: none;
+padding: 10px 20px;
+margin-bottom: 10px;
+border-radius: 8px;
+font-size: 1rem;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
+}
+
+a#noscript-link:hover {
+background-color: var(--hover-link-color);
+}
+
+div#noscript-frame-wrapper iframe {
+flex-grow: 1;
+width: 100%;
+border: none;
+}
+
+.hidden {
+display: none !important;
+}
+
+.visible {
+display: block !important;
+}

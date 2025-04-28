@@ -1,0 +1,98 @@
+{
+"name": "Smart calculator",
+"short_name": "calculator",
+"description": ".",
+"start_url": "/index.html",
+"display": "standalone",
+"theme_color": "rgb(211, 141, 77)",
+"background_color": "rgb(211, 141, 77)"
+"item_color": "#007bff",
+"scope": "/",
+"orientation": "portrait",
+"lang": "en",
+"dir": "ltr",
+"icons": [
+{
+"src": "images/icon/favicon.ico",
+"sizes": "any",
+"type": "image/x-icon",
+"purpose": "any"
+},
+{
+"src": "images/icon/icon-192x192.png",
+"sizes": "192x192",
+"type": "image/png",
+"purpose": "any"
+},
+{
+"src": "images/icon/icon-512x512.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "any"
+},
+{
+"src": "images/icon/maskable-icon.webp",
+"sizes": "512x512",
+"type": "image/webp",
+"purpose": "maskable"
+}
+],
+"shortcuts": [{
+"name": "Open calculator",
+"short_name": "Open",
+"description": "Open the calculator",
+"url": "index.html",
+"icons": [{
+"src": "images/icon/favicon.ico",
+"sizes": "any",
+"type": "image/x-icon"
+}]
+}],
+"prefer_related_applications": false,
+"share_target": {
+"action": "/share",
+"method": "POST",
+"enctype": "multipart/form-data",
+"params": {
+"title": "name",
+"text": "description",
+"url": "share_url"
+}
+},
+"monetization": {
+"model": "free",
+"details": {
+"type": "donation",
+"url": ""
+}
+},
+"color_scheme": "l",
+"font": {
+"family": "Arial, Helvetica, sans-serif",
+"size": "16px",
+"line_height": "1.5",
+"text_align": "left"
+},
+"background": {
+"image": "images/icons/background.png",
+"repeat": "no-repeat",
+"position": "center center",
+"size": "cover"
+},
+"splash_screens": [{
+"src": "images/icon/splash-1280x1920.webp",
+"sizes": "1280x1920",
+"type": "image/webp"
+}
+}],
+"cache": {
+"max_age": "86400",
+"update_via_cache": "all"
+},
+"serviceworker": {
+"src": "js/sw.js",
+"scope": "/",
+"type": "classic",
+"update_via_cache": "none"
+}
+}

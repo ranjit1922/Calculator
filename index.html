@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="noscript" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<script>document.documentElement.classList.remove('noscript');</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Advanced Scientific Calculator">
+<meta name="author" content="Priyanshu">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex, nofollow">
+<title itemprop="name">Smart calculator</title>
+<link rel="shortcut icon" href="./images/icon/favicon.ico" sizes="any" type="image/x-icon" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/style.css" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet';">
+<link rel="stylesheet" href="./css/media.css" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet';">
+<link rel="stylesheet" href="./css/utils.css" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet';">
+<link rel="manifest" href="./json/manifest.json" type="text/json" crossorigin="anonymous">
+</head>
+
+<body data-theme="dark" itemscope itemtype="http://schema.org/WebPage">
+
+<noscript>
+<div id="noscript-frame-wrapper">
+<a href="./noscript.html" target="_blank" rel="noopener" id="noscript-link">JavaScript is disabled. Click here for help.</a>
+<iframe src="./noscript.html" title="JavaScript Disabled Instructions" loading="lazy"></iframe>
+</div>
+</noscript>
+
+<button id="menu-toggle" class="btn toggle-button" aria-expanded="false">&#9660;</button>
+
+<header id="header" role="banner">
+<div class="header-content">
+<h1 id="title">Smart Calculator</h1>
+<div class="header-buttons">
+<button id="settings-btn" class="btn" aria-label="Settings">&#9881;</button>
+</div>
+</div>
+</header>
+
+<main id="main" role="main">
+<section id="calculator" aria-label="Calculator Panel">
+<div id="display" aria-live="polite">0</div>
+
+<div id="buttons">
+<button id="clear" class="btn control">AC</button>
+<button id="plus-minus" class="btn control">±</button>
+<button id="delete" class="btn control">&#9003;</button>
+<button id="divide" class="btn operator" data-operator="/">&#247;</button>
+
+<button class="btn number" data-number="7">7</button>
+<button class="btn number" data-number="8">8</button>
+<button class="btn number" data-number="9">9</button>
+<button id="multiply" class="btn operator" data-operator="*">&#215;</button>
+
+<button class="btn number" data-number="4">4</button>
+<button class="btn number" data-number="5">5</button>
+<button class="btn number" data-number="6">6</button>
+<button id="subtract" class="btn operator" data-operator="-">-</button>
+
+<button class="btn number" data-number="1">1</button>
+<button class="btn number" data-number="2">2</button>
+<button class="btn number" data-number="3">3</button>
+<button id="add" class="btn operator" data-operator="+">+</button>
+
+<button class="btn number" data-number="0">0</button>
+<button id="decimal" class="btn">.</button>
+<button id="equals" class="btn control">=</button>
+<button id="layout-toggle" class="btn layout-toggle" title="Switch Layout">&#8644;</button>
+</div>
+
+<section class="layout scientific-layout hidden" aria-label="Scientific Layout">
+<div class="button-grid">
+<button class="btn func" data-func="sin">sin</button>
+<button class="btn func" data-func="cos">cos</button>
+<button class="btn func" data-func="tan">tan</button>
+<button class="btn func" data-func="log">log</button>
+<button class="btn func" data-func="sqrt">&#8730;x</button>
+<button class="btn func" data-func="power">x&#710;</button>
+<button class="btn func" data-func="abs">|x|</button>
+<button class="btn func" data-func="exp">e<sup>x</sup></button>
+<button class="btn func" data-func="pi">&#960;</button>
+<button class="btn func" data-func="e">e</button>
+<button class="btn func" data-func="mod">mod</button>
+<button class="btn func" data-func="factorial">n!</button>
+</div>
+</section>
+
+<section class="layout algebra-layout hidden" aria-label="Algebra Layout">
+<div class="button-grid">
+<button class="btn func" data-func="leftParen">&#40;</button>
+<button class="btn func" data-func="rightParen">&#41;</button>
+<button class="btn func" data-func="square">x<sup>2</sup></button>
+<button class="btn func" data-func="cube">x<sup>3</sup></button>
+<button class="btn func" data-func="logBase">log<sub>y</sub>x</button>
+<button class="btn func" data-func="nthRoot">y&#8730;x</button>
+<button class="btn func" data-func="rand">rand</button>
+<button class="btn func" data-func="toDms">&#8594; dms</button>
+<button class="btn func" data-func="toDeg">&#8594; deg</button>
+<button class="btn func" data-func="floor">&#8970;x&#8971;</button>
+<button class="btn func" data-func="ceil">&#8968;x&#8969;</button>
+<button class="btn func" data-func="cot">cot</button>
+</div>
+</section>
+</section>
+</main>
+<script src="./js/script.js" type="module" type="text/js" crossorigin="anonymous"  defer></script>
+</body>
+</html>

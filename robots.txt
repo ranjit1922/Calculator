@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ranjit1922.github.io/Calculator/sitemap.xml

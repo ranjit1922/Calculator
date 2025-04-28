@@ -1,0 +1,109 @@
+@media (min-width: 0px) and (max-width: 400px) {
+main {
+padding: 0.5rem;
+padding-bottom: 1rem;
+}
+section#calculator {
+width: 95%;
+max-width: 95%;
+margin-bottom: 10px;
+padding: 15px;
+border-radius: 15px;
+}
+div#display {
+font-size: 2rem;
+padding: 10px;
+margin-bottom: 15px;
+min-height: 60px;
+}
+div.button-grid, #buttons {
+gap: 8px;
+}
+button {
+font-size: 1.3rem;
+height: 55px;
+width: 55px;
+}
+button#menu-toggle {
+width: 50px;
+height: 50px;
+right: 15px;
+top: 15px;
+}
+}
+@media (min-width: 400px) and (max-width: 767px) {
+main {
+padding-bottom: 1.5rem;
+}
+section#calculator {
+width: 90%;
+margin-bottom: 15px;
+}
+div#display {
+font-size: 2.2rem;
+}
+div.button-grid, #buttons {
+gap: 10px;
+}
+button {
+font-size: 1.4rem;
+height: 60px;
+width: 60px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+main {
+justify-content: center;
+}
+section#calculator {
+width: 80%;
+max-width: 500px;
+min-width: unset;
+}
+div#display {
+font-size: 2.5rem;
+}
+button {
+font-size: 1.6rem;
+height: 70px;
+width: 70px;
+}
+}
+
+@media (min-width: 1024px) {
+main {
+justify-content: center;
+}
+section#calculator {
+max-width: 600px;
+}
+div#display {
+font-size: 2.8rem;
+min-height: 100px;
+}
+button {
+height: 80px;
+width: 80px;
+font-size: 1.8rem;
+}
+}
+
+/* Print Layout */
+@media print {
+body * {
+display: none !important;
+}
+div#display {
+display: block !important;
+font-size: 72px !important;
+color: black !important;
+background: white !important;
+padding: 2em !important;
+text-align: right !important;
+margin: 5vh auto !important;
+width: 80% !important;
+box-shadow: none !important;
+border: none !important;
+}
+}
