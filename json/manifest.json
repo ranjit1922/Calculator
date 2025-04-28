@@ -3,7 +3,7 @@
   "short_name": "Calculator",
   "description": "An advanced scientific calculator.",
   "start_url": "/index.html",
-  "scope": "/",
+  "scope": "/Calculator",
   "display": "standalone",
   "theme_color": "#d38d4d",
   "background_color": "#d38d4d",
