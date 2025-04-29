@@ -12,12 +12,6 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "images/icon/favicon.ico",
-      "sizes": "any",
-      "type": "image/x-icon",
-      "purpose": "any"
-    },
-    {
       "src": "images/icon/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
@@ -34,6 +28,12 @@
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "maskable"
+    },
+        {
+      "src": "images/icon/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
