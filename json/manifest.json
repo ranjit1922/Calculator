@@ -6,8 +6,8 @@
   "scope": "/",
   "display": "standalone",
   "theme_color": "#d38d4d",
-  "background_color": "#d38d4d",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
   "lang": "en",
   "dir": "ltr",
   "icons": [
@@ -29,7 +29,7 @@
       "type": "image/webp",
       "purpose": "maskable"
     },
-        {
+    {
       "src": "images/icon/favicon.ico",
       "sizes": "any",
       "type": "image/x-icon",
@@ -58,8 +58,24 @@
     "params": {
       "title": "name",
       "text": "description",
-      "url": "share_url"
+      "url": "share_url",
+      "files": []
     }
   },
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "id": "smart_calculator",
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "minimal-ui",
+    "window-controls-overlay",
+    "browser"
+  ],
+  "categories": [
+    "productivity",
+    "utilities"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 100
+  }
 }
