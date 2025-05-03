@@ -10,6 +10,7 @@
   "orientation": "portrait-primary",
   "lang": "en",
   "dir": "ltr",
+  "handle_links": "preferred",
   "icons": [
     {
       "src": "images/other_icon/icon-192x192.png",
