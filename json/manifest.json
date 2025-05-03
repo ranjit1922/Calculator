@@ -3,7 +3,7 @@
   "short_name": "Calculator",
   "description": "An advanced scientific calculator.",
   "start_url": "https://ranjit1922.github.io/Calculator/",
-  "scope": "/",
+  "scope": "/Calculator",
   "display": "standalone",
   "theme_color": "#d38d4d",
   "background_color": "#ffffff",
