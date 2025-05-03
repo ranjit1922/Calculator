@@ -1,20 +1,85 @@
 {
   "name": "Smart Calculator",
   "short_name": "Calculator",
-  "description": "An advanced scientific calculator.",
+  "description": "An advanced scientific calculator with comprehensive mathematical functions",
   "start_url": "https://ranjit1922.github.io/Calculator/",
-  "scope": "/Calculator",
+  "scope": "/Calculator/",
   "display": "standalone",
   "theme_color": "#d38d4d",
   "background_color": "#ffffff",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "lang": "en",
   "dir": "ltr",
   "handle_links": "preferred",
+  "id": "?=smart_calculator",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "fullscreen",
+    "minimal-ui",
+    "browser"
+  ],
+  "categories": [
+    "productivity",
+    "utilities",
+    "education"
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshots/calculator-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Calculator on desktop"
+    },
+    {
+      "src": "images/screenshots/calculator-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Calculator on mobile"
+    }
+  ],
   "icons": [
+    {
+      "src": "images/other_icon/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/other_icon/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/other_icon/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/other_icon/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/other_icon/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "images/other_icon/icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/other_icon/icon-384x384.png",
+      "sizes": "384x384",
       "type": "image/png",
       "purpose": "any"
     },
@@ -31,18 +96,50 @@
       "purpose": "maskable"
     },
     {
+      "src": "images/other_icon/monochrome-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
       "src": "images/other_icon/favicon.ico",
-      "sizes": "any",
+      "sizes": "16x16 32x32 48x48",
       "type": "image/x-icon",
       "purpose": "any"
     }
   ],
   "shortcuts": [
     {
-      "name": "Open Calculator",
-      "short_name": "Open",
-      "description": "Open the calculator",
-      "url": "index.html",
+      "name": "Scientific Mode",
+      "short_name": "Scientific",
+      "description": "Open scientific calculator mode",
+      "url": "index.html?mode=scientific",
+      "icons": [
+        {
+          "src": "images/other_icon/favicon.ico",
+          "sizes": "any",
+          "type": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "name": "Basic Mode",
+      "short_name": "Basic",
+      "description": "Open basic calculator mode",
+      "url": "index.html?mode=basic",
+      "icons": [
+        {
+          "src": "images/other_icon/favicon.ico",
+          "sizes": "any",
+          "type": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "name": "Unit Converter",
+      "short_name": "Convert",
+      "description": "Open unit converter",
+      "url": "index.html?mode=converter",
       "icons": [
         {
           "src": "images/other_icon/favicon.ico",
@@ -51,32 +148,52 @@
         }
       ]
     }
-  ],
-  "share_target": {
-    "action": "/share",
+  ],  "share_target": {
+
+    "action": "/Calculator/share",
+
     "method": "POST",
+
     "enctype": "multipart/form-data",
+
     "params": {
+
       "title": "name",
+
       "text": "description",
+
       "url": "share_url",
-      "files": []
+
+      "files": [
+        {
+          "name": "calculations",
+          "accept": ["text/plain", "text/csv"]
+        }
+      ]
     }
   },
+  "file_handlers": [
+    {
+      "action": "/Calculator/open-file",
+      "accept": {
+        "text/csv": [".csv"],
+        "text/plain": [".txt"]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+calc",
+      "url": "index.html?formula=%s"
+    }
+  ],
   "prefer_related_applications": false,
-  "id": "smart_calculator",
-  "display_override": [
-    "standalone",
-    "window-controls-overlay",
-    "fullscreen",
-    "minimal-ui",
-    "browser"
-  ],
-  "categories": [
-    "productivity",
-    "utilities"
-  ],
   "edge_side_panel": {
     "preferred_width": 400
-  }
+  },
+  "capture_links": "existing-client-navigate",
+  "display_mode": "standalone"
 }
