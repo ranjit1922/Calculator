@@ -1,7 +1,7 @@
 // Constants for PWA configuration
 const CONFIG = {
     SW_PATH: '/js/sw.js',
-    SW_SCOPE: '/Calculator',
+    SW_SCOPE: 'https://ranjit1922.github.io/Calculator/',
     UPDATE_CHECK_INTERVAL: 60 * 60 * 1000, // 1 hour
     PERIODIC_SYNC_INTERVAL: 24 * 60 * 60 * 1000, // 24 hours
     VAPID_PUBLIC_KEY: 'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
